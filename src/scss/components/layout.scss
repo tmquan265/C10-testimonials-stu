@@ -1,0 +1,44 @@
+@use "../utils" as *;
+@use "../globals" as *;
+
+// Testimonial Section
+.testimonial {
+    width: 85%;
+    max-width: 75rem;
+    margin: 0rem auto;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr 1fr;
+        gap : 2rem;
+    }
+    
+    &__item {
+        padding: 1.25rem;
+        border-radius: 0.3rem;
+
+        &--violet {
+            @include area(1,2,1,3,var(--color-violet),var(--color-white));
+        }
+        &--grey {
+            @include area(1,2,3,4,var(--color-grey),var(--color-white));
+        }
+        &--white-long {
+            @include area(1,3,4,5,var(--color-white));
+        }
+        &--white {
+            @include area(2,3,1,2,var(--color-white));
+        }
+        &--dark-grey {
+            @include area(2,3,2,4,var(--color-dark-grey),var(--color-white));
+        }
+    }
+}
+
+
+// Footer Section
+.footer {
+    margin: rem(30);
+    text-align: center;
+}
